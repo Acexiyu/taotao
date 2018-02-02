@@ -37,6 +37,7 @@
 		<activemq.version>5.12.0</activemq.version>
 		<freemarker.version>2.3.23</freemarker.version>
 		<quartz.version>2.2.2</quartz.version>
+		<javax.persistence.version>1.0</javax.persistence.version>
 	</properties>
 
 	<dependencyManagement>
@@ -93,6 +94,13 @@
 				<groupId>tk.mybatis</groupId>
 				<artifactId>mapper</artifactId>
 				<version>${mapper.version}</version>
+			</dependency>
+			
+			<!-- JPA注解 -->
+			<dependency>
+			   <groupId>javax.persistence</groupId>
+			   <artifactId>persistence-api</artifactId>
+			   <version>${javax.persistence.version}</version>
 			</dependency>
 
 			<!-- 分页助手 -->

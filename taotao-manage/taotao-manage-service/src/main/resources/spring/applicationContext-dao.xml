@@ -57,8 +57,15 @@
 	</bean>
 	
 	<!-- 配置扫描mapper包 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<!-- 通用mapper配置 -->
+	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 配置扫描的包 -->
 		<property name="basePackage" value="com.taotao.manage.mapper"/>
+		<property name="properties">
+			<value>
+				mappers=tk.mybatis.mapper.common.Mapper
+			</value>
+		</property>
 	</bean>
+	
 </beans>
