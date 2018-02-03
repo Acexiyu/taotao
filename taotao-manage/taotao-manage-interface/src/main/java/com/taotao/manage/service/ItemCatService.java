@@ -9,7 +9,7 @@ import com.taotao.manage.pojo.ItemCat;
  * @author Ace
  *
  */
-public interface ItemCatService {
+public interface ItemCatService extends BaseService<ItemCat> {
 
 	/**
 	 * 分页查询商品类目
@@ -17,5 +17,6 @@ public interface ItemCatService {
 	 * @param rows 页面大小
 	 * @return
 	 */
+	@Deprecated
 	public List<ItemCat> queryItemCatListByPage(Integer page, Integer rows);
 }

@@ -16,7 +16,7 @@ import com.taotao.manage.service.ItemCatService;
  *
  */
 @Service
-public class ItemCatServiceImpl implements ItemCatService {
+public class ItemCatServiceImpl extends BaseServiceImpl<ItemCat> implements ItemCatService {
 
 	//注入ItemCatMapper
 	@Autowired
