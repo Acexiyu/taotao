@@ -69,4 +69,20 @@ public class ItemCatController {
 		
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 	}
+	
+	/**
+	 * 根据id查询商品类目
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("/{id}")
+	public ResponseEntity<ItemCat> queryById(@PathVariable Long id) {
+		try {
+			ItemCat itemCat = itemCatService.queryById(id);
+			return ResponseEntity.ok().body(itemCat);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+	}
 }

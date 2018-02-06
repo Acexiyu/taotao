@@ -29,5 +29,6 @@ public class ItemCatServiceImpl extends BaseServiceImpl<ItemCat> implements Item
 		//调用itemCatMapper查询
 		return itemCatMapper.selectAll();
 	}
+	
 
 }

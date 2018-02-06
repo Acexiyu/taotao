@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * 商品实体
@@ -40,11 +41,22 @@ public class Item extends BasePojo {
 
     @Column
     private Long cid;
+    
+    @Transient
+    private String cname;
 
     @Column
     private Integer status;
+    
+    public String getCname() {
+		return cname;
+	}
 
-    public Long getId() {
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public Long getId() {
         return id;
     }
 

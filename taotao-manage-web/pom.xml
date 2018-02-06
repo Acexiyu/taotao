@@ -26,6 +26,13 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 		</dependency>
+		
+		<!-- 文件上传组件 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+		
 		<!-- 日志 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -87,6 +94,11 @@
 			<artifactId>zkclient</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>fastdfs_client</groupId>
+			<artifactId>fastdfs_client</artifactId>
+			<version>1.25</version>
+		</dependency>
 	</dependencies>
 	
 	<build>

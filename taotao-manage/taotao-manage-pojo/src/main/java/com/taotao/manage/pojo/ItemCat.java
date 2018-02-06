@@ -6,8 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 /**
  * 商品类目实体
  * @author Ace
@@ -25,7 +23,6 @@ public class ItemCat extends BasePojo {
     @Column(name = "parent_id")
     private Long parentId;
 
-    @JsonProperty("text")
     private String name;
 
     private Integer status;
@@ -86,6 +83,10 @@ public class ItemCat extends BasePojo {
     
     public String getState() {
     	return this.isParent ? "closed" : "open";
+    }
+    
+    public String getText() {
+    	return this.getName();
     }
 
 }
