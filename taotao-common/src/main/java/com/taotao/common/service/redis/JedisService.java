@@ -1,4 +1,4 @@
-package com.taotao.manage.service.redis;
+package com.taotao.common.service.redis;
 
 /**
  * Redis Service接口

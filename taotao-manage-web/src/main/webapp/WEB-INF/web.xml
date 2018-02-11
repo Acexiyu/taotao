@@ -16,6 +16,26 @@
   	<url-pattern>/*</url-pattern>
   </filter-mapping>
   
+  <!-- 解决rest时put方式无法获取表单参数 -->
+  <filter>
+  	<filter-name>httpPutFormContentFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>httpPutFormContentFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 解决rest时delete方式提交获取表单参数，通过post方式添加_method参数来模拟delete方式 -->
+  <filter>
+  	<filter-name>hiddenHttpMethodFilter</filter-name>
+	<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>  	
+  </filter>
+  <filter-mapping>
+  	<filter-name>hiddenHttpMethodFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
   <!-- 配置springmvc前端控制器 -->
   <servlet>
   	<servlet-name>taotao-manage-web</servlet-name>

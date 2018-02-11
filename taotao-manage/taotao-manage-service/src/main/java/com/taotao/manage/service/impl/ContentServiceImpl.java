@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.taotao.common.service.redis.JedisService;
 import com.taotao.common.vo.DataGridResult;
 import com.taotao.manage.mapper.ContentMapper;
 import com.taotao.manage.pojo.Content;
 import com.taotao.manage.service.ContentService;
-import com.taotao.manage.service.redis.JedisService;
 
 import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.entity.Example.Criteria;

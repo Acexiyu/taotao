@@ -2,21 +2,17 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.taotao</groupId>
-    <artifactId>taotao-parent</artifactId>
+    <artifactId>taotao-sso</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>taotao-common</artifactId>
+  <artifactId>taotao-sso-pojo</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   
   <dependencies>
-  	<!-- Redis客户端 -->
+	<!-- JPA注解 -->
 	<dependency>
-		<groupId>redis.clients</groupId>
-		<artifactId>jedis</artifactId>
-	</dependency>
-	<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
+	   <groupId>javax.persistence</groupId>
+	   <artifactId>persistence-api</artifactId>
 	</dependency>
   </dependencies>
 </project>

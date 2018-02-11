@@ -1,9 +1,9 @@
-package com.taotao.manage.service.redis.impl;
+package com.taotao.common.service.redis.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.taotao.manage.service.redis.JedisPoolFunction;
-import com.taotao.manage.service.redis.JedisService;
+import com.taotao.common.service.redis.JedisPoolFunction;
+import com.taotao.common.service.redis.JedisService;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

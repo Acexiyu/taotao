@@ -3,46 +3,47 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.taotao</groupId>
-		<artifactId>taotao-manage</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<artifactId>taotao-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>taotao-manage-service</artifactId>
+	<artifactId>taotao-sso-web</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
+
 	<dependencies>
+		<!-- taotao-sso-interface依赖 -->
 		<dependency>
 			<groupId>com.taotao</groupId>
-			<artifactId>taotao-manage-mapper</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.taotao</groupId>
-			<artifactId>taotao-manage-interface</artifactId>
+			<artifactId>taotao-sso-interface</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
+			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
-		<!-- MySql -->
+		<!-- 日志 -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-		<!-- 连接池 -->
+
+		<!-- Jackson Json处理工具包 -->
 		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<!-- Apache工具组件 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
 		</dependency>
 
 		<!-- dubbo相关 -->
@@ -68,10 +69,21 @@
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.taotao</groupId>
-			<artifactId>taotao-common</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
+
 	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- 配置Tomcat插件 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<path>/</path>
+					<port>9094</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
