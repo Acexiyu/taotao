@@ -159,7 +159,7 @@ pageConfig.DATA_MScroll =[
     var f = a.length, g = c.length;
     for (var i = 0; i < 18 - f; i++) {
         if (i > g - 1) {
-            continue
+            continue;
         }
         a.push(c.shift())
     }

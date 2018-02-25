@@ -11,7 +11,7 @@
   <dependencies>
 		<dependency>
 			<groupId>com.taotao</groupId>
-			<artifactId>taotao-manage-pojo</artifactId>
+			<artifactId>taotao-sso-pojo</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
@@ -29,5 +29,5 @@
 			<groupId>tk.mybatis</groupId>
 			<artifactId>mapper</artifactId>
 		</dependency>
-	</dependencies>
+  </dependencies>
 </project>

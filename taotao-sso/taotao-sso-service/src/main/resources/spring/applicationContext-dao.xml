@@ -53,7 +53,7 @@
 		<!-- 加载myBatis的配置为文件 -->
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
 		<!-- 加载mapper映射文件 -->
-		<property name="mapperLocations" value="classpath:mybatis/mappers/**/*.xml"/>
+		<!-- <property name="mapperLocations" value="classpath:mybatis/mappers/**/*.xml"/> -->
 		<!-- 配置包中的类的别名 -->
 		<property name="typeAliasesPackage" value="com.taotao.sso.pojo"/>
 	</bean>

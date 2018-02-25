@@ -241,10 +241,10 @@
 	                        }
 	                        return;
 	                    }else{
-	                    $("#loginsubmit").removeAttr("disabled");
-	                    verc();
-	                      $("#nloginpwd").attr({ "class": "text highlight2" });
-	                      $("#loginpwd_error").html("账号或密码错误!").show().attr({ "class": "error" });
+	                    	$("#loginsubmit").removeAttr("disabled");
+	                   		verc();
+	                      	$("#nloginpwd").attr({ "class": "text highlight2" });
+	                     	$("#loginpwd_error").html("账号或密码错误!").show().attr({ "class": "error" });
 	                    	
 	                    }
 	                }
