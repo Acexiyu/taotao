@@ -14,7 +14,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		i.barcode,
 		i.status,
 		i.created,
-		i.updated
+		i.updated,
+		i.image,
+		i.cid
 		from tb_item i 
 		INNER JOIN tb_item_cat c 
 		on i.cid = c.id
